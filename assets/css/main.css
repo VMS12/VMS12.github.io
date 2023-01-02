@@ -207,6 +207,7 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: 100%;
 		width: 70em;
+		position: flex;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -1948,21 +1949,24 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		position: absolute;
+/*		position: absolute;
 		top: 1em;
 		left: 0;
 		width: 100%;
-		cursor: default;
+		cursor: default;*/
+		display: inline;
+		align-items: center;
+		justify-content: space-between;
+		flex: 10 0 auto;
 	}
 
+  #nav > ul {
+    display:inline;
+  }
+  
 		#nav > ul > li {
 			display: inline-block;
-			padding-right: 2em;
 		}
-
-			#nav > ul > li:last-child {
-				padding-right: 0;
-			}
 
 			#nav > ul > li > a {
 				border: 0;
@@ -1971,10 +1975,10 @@ input, select, textarea {
 				font-weight: 400;
 				color: #777;
 				outline: 0;
-				display: block;
+				/*display: block;*/
+				position: relative;
 			}
-
-				#nav > ul > li > a:before {
+			#nav > ul > li > a:before {
 					display: inline-block;
 					background: #878787;
 					color: #e4e4e4;
@@ -2017,6 +2021,7 @@ input, select, textarea {
 			#nav > ul > li:hover > a > span {
 				color: #ED786A;
 			}
+
 
 /* Features */
 
@@ -2258,7 +2263,7 @@ input, select, textarea {
 		/* Header */
 
 			#header > .container {
-				padding: 5em 0 0em 0;
+				padding: 0em 0 0em 0;
 			}
 
 			#header h1 {
@@ -2309,7 +2314,10 @@ input, select, textarea {
 /* Medium */
 
 	#navPanel, #titleBar {
-		display: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex: 10 0 auto;
 	}
 
 	@media screen and (max-width: 980px) {
@@ -2328,9 +2336,9 @@ input, select, textarea {
 
 		/* Nav */
 
-			#nav {
-				display: none;
-			}
+/*			#nav {
+				display: flex;
+			}*/
 
 		/* Nav */
 
@@ -2441,7 +2449,7 @@ input, select, textarea {
 			}
 
 				#navPanel .link {
-					display: block;
+					display: inline-block;
 					color: #ddd;
 					text-decoration: none;
 					height: 44px;
@@ -2553,9 +2561,6 @@ input, select, textarea {
 				max-width: 35%;
 			}
 	    
-	    .image.selfie {
-	      margin: 0 0 0 0;
-	    }
 
 		/* Button */
 
